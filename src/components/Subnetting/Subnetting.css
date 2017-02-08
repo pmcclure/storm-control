@@ -1,0 +1,31 @@
+.subnetting-root-div{
+    padding-left: 30px;
+    padding-top: 15px;
+}
+
+.subnetting-form-class {
+    padding-top: 30px;
+}
+
+.subnetting-slash {
+    font-size: 50px;
+}
+
+.subnetting-field-class {
+	padding-top: 30px;
+}
+
+.subnetting-field-title {
+	display: inline-block;
+	width: 200px;
+	padding-bottom: 30px;
+	font-size: 18px;
+
+}
+
+.subnetting-field-value {
+	display: inline-block;
+	font-size: 18px;
+	color: #BE5108;
+}
+

@@ -1,0 +1,15 @@
+.masonry-container {
+	max-width: 900px;
+}
+
+.panel {
+	width: 200px;
+	margin: 10px;
+}
+
+.panel > .panel-heading {
+	color: #BE5108;
+	background-color: blue;
+	
+}
+	

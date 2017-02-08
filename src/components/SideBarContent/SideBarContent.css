@@ -1,0 +1,12 @@
+.image {
+    padding-left: 70px;
+}
+
+.linkFade {
+    transition: color .5s ease-out;
+}
+
+.linkFade:hover {
+  color: #BE5108;
+  cursor: pointer;
+}
