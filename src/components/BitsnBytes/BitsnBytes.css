@@ -1,0 +1,32 @@
+.bitsnbytes-root-div{
+    padding-left: 30px;
+    padding-top: 15px;
+}
+
+.bitsnbytes-root-div h3 {
+	padding-bottom: 20px;
+	
+}
+
+.bitsnbytes-form-class {
+    width: 500px;
+	padding-top: 40px;
+}
+
+.bitsnbytes-field-class {
+	padding-top: 30px;
+}
+
+.bitsnbytes-field-title {
+	display: inline-block;
+	width: 200px;
+	padding-bottom: 30px;
+	font-size: 18px;
+
+}
+
+.bitsnbytes-field-value {
+	display: inline-block;
+	font-size: 18px;
+	color: #BE5108;
+}

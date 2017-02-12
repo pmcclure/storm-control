@@ -8,6 +8,7 @@ import Subnetting from './components/Subnetting/Subnetting';
 import WhoIs from './components/WhoIs/WhoIs';
 import Converter from './components/Converter/Converter';
 import Bgp from './components/Bgp/Bgp';
+import BitsnBytes from './components/BitsnBytes/BitsnBytes';
 
 const Routes = (props) => (
 	<Router {...props}>
@@ -15,6 +16,7 @@ const Routes = (props) => (
 			<IndexRoute component={Subnetting} />
 			<Route path="/subnetting" component={Subnetting} />
 			<Route path="/converter" component={Converter} />
+            <Route path="/bitsnbytes" component={BitsnBytes} />
 			<Route path="/whois" component={WhoIs} />
 			<Route path="/bgp" component={Bgp} />
 			<Route path="/about" component={About} />

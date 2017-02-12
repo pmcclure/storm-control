@@ -30,8 +30,8 @@ export default class WhoIs extends Component {
         const whoisQuery = this.state.whois;
         if ((this.getValidationStateWhois()) === 'success') {
             axios.get(`http://localhost:8080/api/whois?whoisquery=${whoisQuery}`)
-                .then(response => {                 
-                    this.setState({ data: response.data });                    
+                .then(response => {
+                    this.setState({ data: response.data });
                 })
                 .catch(error => {
                     this.setState({ data: '' })
@@ -39,10 +39,9 @@ export default class WhoIs extends Component {
                 });
         }
         else {
-            console.log('error');
             this.setState.data = '';
+            console.log('error');
         }
-
     }
 
     handleChangeWhois(e) {
@@ -54,32 +53,25 @@ export default class WhoIs extends Component {
         this.getWhoisData();
     }
 
-
     render() {
         return (
             <div className="whois-root-div">
                 <h3> Whois Lookup </h3>
                 <div className="whois-form-class">
                     <Form inline onSubmit={this.handleSubmit}>
-                        <FormGroup
-                            controlId="formWhois"
-                            validationState={this.getValidationStateWhois()}
-
-                            >
-
+                        <FormGroup controlId="formWhois" validationState={this.getValidationStateWhois()}>
                             <FormControl
                                 type="text"
                                 value={this.state.whois}
                                 placeholder="Whois"
                                 onChange={this.handleChangeWhois}
-                                />
+                            />
                             <Button type="submit">Submit</Button>
                             <HelpBlock>Enter an IP address or URL</HelpBlock>
                         </FormGroup>
                     </Form>
                 </div>
                 <div className="whois-results">
-                  
                     {this.state.data.split('\n').map(function (item, key) {
                         return (
                             <span key={key}>

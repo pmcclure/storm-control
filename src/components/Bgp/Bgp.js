@@ -63,7 +63,7 @@ export default class Bgp extends Component {
     render() {
         return (
             <div className="bgp-root-div">
-                <h3>BGP</h3>
+                <h3>BGPv4 Prefixes</h3>
                 <div className="bgp-form-class">
                     <Form inline onSubmit={this.handleSubmit}>
                         <FormGroup
@@ -77,13 +77,13 @@ export default class Bgp extends Component {
                                 onChange={this.handleChangeBgp}
                             />
                             <Button type="submit">Submit</Button>
-                            <HelpBlock>Enter a BGP ASN or IP address </HelpBlock>
+                            <HelpBlock>Enter a BGP ASN (1-64511) </HelpBlock>
                         </FormGroup>
                     </Form>
                 </div>
                 <div className="bgp-results">
-					<div>
-                    	{this.state.holder}
+					<div className="bgp-holder">
+                    	<h3>{this.state.holder}</h3>
 					</div>
 					<div>
 						<Prefixes prefixesData={this.state.geoData}/>

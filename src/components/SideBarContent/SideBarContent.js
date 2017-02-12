@@ -45,6 +45,11 @@ const SideBarContent = (props) => {
 					<div className="linkFade">Decimal/Binary/Hex</div>
 				</Link>
 			</div>
+             <div>
+				<Link to="/bitsnbytes" style={styles.sidebarLink}>
+					<div className="linkFade">Bits/Bytes</div>
+				</Link>
+			</div>
 			<div>
 				<Link to="/whois" style={styles.sidebarLink}>
 					<div className="linkFade">Who Is</div>

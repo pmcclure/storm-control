@@ -97,28 +97,28 @@ export default class Subnetting extends Component {
                         <FormGroup
                             controlId="formSubnet"
                             validationState={this.getValidationStateSubnet()}
-                            >
+                        >
                             <FormControl
                                 type="text"
                                 value={this.state.subnet}
                                 placeholder="Subnet"
                                 onChange={this.handleChangeSubnet}
-                                />
+                            />
                             <FormControl.Feedback />
-                            <HelpBlock>Enter an IPv4 address</HelpBlock>
+                            <HelpBlock>Enter an IP address</HelpBlock>
                         </FormGroup>
                         <span className="subnetting-slash">/</span>
 
                         <FormGroup
                             controlId="formMask"
                             validationState={this.getValidationStateMask()}
-                            >
+                        >
                             <FormControl
                                 type="text"
                                 value={this.state.mask}
                                 placeholder="Mask"
                                 onChange={this.handleChangeMask}
-                                />
+                            />
                             <FormControl.Feedback />
                             <HelpBlock>Enter a Mask (eg 24)</HelpBlock>
                         </FormGroup>
@@ -136,7 +136,7 @@ export default class Subnetting extends Component {
                     <div>
                         <div className="subnetting-field-title"> Addresses </div> <div className="field-value"> {this.getHosts()} </div>
                     </div>
-                     <div>
+                    <div>
                         <div className="subnetting-field-title"> Host Start Address </div> <div className="field-value"> {this.getStartAddress()} </div>
                     </div>
                     <div>
@@ -149,6 +149,7 @@ export default class Subnetting extends Component {
                         <div className="subnetting-field-title"> Broadcast Address </div> <div className="field-value"> {this.getBroadcastAddress()} </div>
                     </div>
                 </div>
+
             </div>
         );
     }

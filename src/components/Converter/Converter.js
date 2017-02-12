@@ -108,7 +108,7 @@ export default class Converter extends Component {
 							>
 							<FormControl
 								type="text"
-								value={this.state.binay}
+								value={this.state.binary}
 								placeholder="Binary"
 								onChange={this.handleChangeBinary}
 								/>
