@@ -136,25 +136,25 @@ export default class Subnetting extends Component {
                 </div>
                 <div className={fieldClass}>
                     <div>
-                        <div className="subnetting-field-title"> Netmask </div> <div className="field-value"> {this.getNetmask()} </div>
+                        <div className="subnetting-field-title"> Netmask </div> <div className="subnetting-field-value"> {this.getNetmask()} </div>
                     </div>
                     <div>
-                        <div className="subnetting-field-title"> Wildcard </div> <div className="field-value"> {this.getWildcard()} </div>
+                        <div className="subnetting-field-title"> Wildcard </div> <div className="subnetting-field-value"> {this.getWildcard()} </div>
                     </div>
                     <div>
-                        <div className="subnetting-field-title"> Addresses </div> <div className="field-value"> {this.getHosts()} </div>
+                        <div className="subnetting-field-title"> Addresses </div> <div className="subnetting-field-value"> {this.getHosts()} </div>
                     </div>
                     <div>
-                        <div className="subnetting-field-title"> Host Start Address </div> <div className="field-value"> {this.getStartAddress()} </div>
+                        <div className="subnetting-field-title"> Host Start Address </div> <div className="subnetting-field-value"> {this.getStartAddress()} </div>
                     </div>
                     <div>
-                        <div className="subnetting-field-title"> Host End Address </div> <div className="field-value"> {this.getEndAddress()} </div>
+                        <div className="subnetting-field-title"> Host End Address </div> <div className="subnetting-field-value"> {this.getEndAddress()} </div>
                     </div>
                     <div>
-                        <div className="subnetting-field-title"> Network Address </div> <div className="field-value"> {this.getNetworkAddress()} </div>
+                        <div className="subnetting-field-title"> Network Address </div> <div className="subnetting-field-value"> {this.getNetworkAddress()} </div>
                     </div>
                     <div>
-                        <div className="subnetting-field-title"> Broadcast Address </div> <div className="field-value"> {this.getBroadcastAddress()} </div>
+                        <div className="subnetting-field-title"> Broadcast Address </div> <div className="subnetting-field-value"> {this.getBroadcastAddress()} </div>
                     </div>
                 </div>
 

@@ -92,34 +92,34 @@ export default class BitsnBytes extends Component {
 				</div>
 				<div className={fieldClass}>
 					<div>
-						<div className="bitsnbytes-field-title"> Bits </div> <div className="field-value"> {this.conversion[0]} </div>
+						<div className="bitsnbytes-field-title"> Bits </div> <div className="bitsnbytes-field-value"> {this.conversion[0]} </div>
 					</div>
 					<div>
-						<div className="bitsnbytes-field-title"> Bytes </div> <div className="field-value"> {this.conversion[1]} </div>
+						<div className="bitsnbytes-field-title"> Bytes </div> <div className="bitsnbytes-field-value"> {this.conversion[1]} </div>
 					</div>
 					<div>
-						<div className="bitsnbytes-field-title"> Kilobits </div> <div className="field-value"> {this.conversion[2]} </div>
+						<div className="bitsnbytes-field-title"> Kilobits </div> <div className="bitsnbytes-field-value"> {this.conversion[2]} </div>
 					</div>
 					<div>
-						<div className="bitsnbytes-field-title"> KiloBytes </div> <div className="field-value"> {this.conversion[3]} </div>
+						<div className="bitsnbytes-field-title"> KiloBytes </div> <div className="bitsnbytes-field-value"> {this.conversion[3]} </div>
 					</div>
 					<div>
-						<div className="bitsnbytes-field-title"> Megabits </div> <div className="field-value"> {this.conversion[4]} </div>
+						<div className="bitsnbytes-field-title"> Megabits </div> <div className="bitsnbytes-field-value"> {this.conversion[4]} </div>
 					</div>
 					<div>
-						<div className="bitsnbytes-field-title"> Megabytes </div> <div className="field-value"> {this.conversion[5]} </div>
+						<div className="bitsnbytes-field-title"> Megabytes </div> <div className="bitsnbytes-field-value"> {this.conversion[5]} </div>
 					</div>
 					<div>
-						<div className="bitsnbytes-field-title"> Gigabits </div> <div className="field-value"> {this.conversion[6]}  </div>
+						<div className="bitsnbytes-field-title"> Gigabits </div> <div className="bitsnbytes-field-value"> {this.conversion[6]}  </div>
 					</div>
 					<div>
-						<div className="bitsnbytes-field-title"> Gigabytes </div> <div className="field-value"> {this.conversion[7]} </div>
+						<div className="bitsnbytes-field-title"> Gigabytes </div> <div className="bitsnbytes-field-value"> {this.conversion[7]} </div>
 					</div>
 					<div>
-						<div className="bitsnbytes-field-title"> Terabits </div> <div className="field-value"> {this.conversion[8]} </div>
+						<div className="bitsnbytes-field-title"> Terabits </div> <div className="bitsnbytes-field-value"> {this.conversion[8]} </div>
 					</div>
 					<div>
-						<div className="bitsnbytes-field-title"> Terabytes </div> <div className="field-value"> {this.conversion[9]} </div>
+						<div className="bitsnbytes-field-title"> Terabytes </div> <div className="bitsnbytes-field-value"> {this.conversion[9]} </div>
 					</div>
 				</div>
 			</div >
