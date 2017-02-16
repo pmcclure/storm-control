@@ -1,23 +1,23 @@
-.root-div{
+.converter-root-div{
     padding-left: 30px;
     padding-top: 15px;
 }
 
-.root-div h3 {
-	padding-bottom: 20px;
-	
-}
-
-.form-class {
+.converter-form-class {
     width: 300px;
-	padding-top: 40px;
-}
-
-.field-class {
 	padding-top: 30px;
 }
 
-.field-title {
+.converter-converter-field-class {
+	padding-top: 30px;
+}
+
+.converter-field-class-hidden {
+	padding-top: 30px;
+	display: none;
+}
+
+.converter-field-title {
 	display: inline-block;
 	width: 200px;
 	padding-bottom: 30px;
@@ -25,7 +25,7 @@
 
 }
 
-.field-value {
+.converter-field-value {
 	display: inline-block;
 	font-size: 18px;
 	color: #BE5108;

@@ -71,22 +71,36 @@ export default class Converter extends Component {
 
 	handleChangeDecimal(e) {
 		this.setState({ decimal: e.target.value });
+		this.setState({ binary: '' });
+		this.setState({ hex: '' });
 	}
 
 	handleChangeBinary(e) {
 		this.setState({ binary: e.target.value });
+		this.setState({ decimal: '' });
+		this.setState({ hex: '' });
 	}
 
 	handleChangeHex(e) {
 		this.setState({ hex: e.target.value });
+		this.setState({ decimal: '' });
+		this.setState({ binary: '' });
 	}
 
 	render() {
+		var fieldClass = 'converter-field-class-hidden';
+
+		if ((this.getValidationStateDecimal() === 'success') || (this.getValidationStateBinary() === 'success') || (this.getValidationStateHex() === 'success')  ) {
+			fieldClass = 'converter-field-class';
+		}
+		else {
+			fieldClass = 'converter-field-class-hidden';
+		}
+
 		return (
-			<div className="root-div">
+			<div className="converter-root-div">
 				<h3> Decimal/Binary/Hex Converter </h3>
-				<div> Use one field at a time </div>
-				<div className="form-class">
+				<div className="converter-form-class">
 					<Form>
 						<FormGroup
 							controlId="formDecimal"
@@ -131,19 +145,18 @@ export default class Converter extends Component {
 						</FormGroup>
 					</Form>
 				</div>
-				<div className="field-class">
+				<div className={fieldClass}>
 					<div>
-						<div className="field-title"> Decimal </div> <div className="field-value"> {this.getDecimalFieldValue()} </div>
+						<div className="converter-field-title"> Decimal </div> <div className="converter-field-value"> {this.getDecimalFieldValue()} </div>
 					</div>
 					<div>
-						<div className="field-title"> Binary </div> <div className="field-value"> {this.getBinaryFieldValue()} </div>
+						<div className="converter-field-title"> Binary </div> <div className="converter-field-value"> {this.getBinaryFieldValue()} </div>
 					</div>
 					<div>
-						<div className="field-title"> Hex </div> <div className="field-value"> {this.getHexFieldValue()} </div>
+						<div className="converter-field-title"> Hex </div> <div className="converter-field-value"> {this.getHexFieldValue()} </div>
 					</div>
 				</div>
 			</div>
-
 		);
 	}
 }

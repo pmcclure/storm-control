@@ -4,7 +4,7 @@
 }
 
 .subnetting-form-class {
-    padding-top: 30px;
+    padding-top: 14px;
 }
 
 .subnetting-slash {
@@ -13,6 +13,11 @@
 
 .subnetting-field-class {
 	padding-top: 30px;
+}
+
+.subnetting-field-class-hidden {
+	padding-top: 30px;
+	display: none;
 }
 
 .subnetting-field-title {

@@ -3,18 +3,18 @@
     padding-top: 15px;
 }
 
-.bitsnbytes-root-div h3 {
-	padding-bottom: 20px;
-	
-}
-
 .bitsnbytes-form-class {
     width: 500px;
-	padding-top: 40px;
+	padding-top: 30px;
 }
 
 .bitsnbytes-field-class {
 	padding-top: 30px;
+}
+
+.bitsnbytes-field-class-hidden {
+	padding-top: 30px;
+	display: none;
 }
 
 .bitsnbytes-field-title {

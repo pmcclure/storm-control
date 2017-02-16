@@ -36,8 +36,7 @@ class App extends Component {
 
 	sidebarStyles = {
 		root: {left: 0},
-		content: { overflowY: 'scroll', WebkitOverflowScrolling: 'touch' },
-       
+		content: { overflowY: 'scroll', WebkitOverflowScrolling: 'touch' },      
 	}
 
 	render() {
@@ -46,7 +45,6 @@ class App extends Component {
 		return (
 			<div>
 				<Sidebar
-
 					styles={this.sidebarStyles}
 					sidebar={sidebarContent}
 					open={this.state.sidebarOpen}
@@ -54,7 +52,6 @@ class App extends Component {
 					onSetOpen={this.onSetSidebarOpen}>
 					{this.props.children}
 				</Sidebar>
-
 			</div>
 		);
 	}

@@ -88,10 +88,18 @@ export default class Subnetting extends Component {
     }
 
     render() {
+		var fieldClass = 'bitsnbytes-field-class-hidden';
+
+		if ((this.getValidationStateSubnet() === 'success') && (this.getValidationStateMask() === 'success')) {
+			fieldClass = 'bitsnbytes-field-class';
+		}
+		else {
+			fieldClass = 'bitsnbytes-field-class-hidden';
+		}
+
         return (
             <div className="subnetting-root-div">
                 <h3> Subnet Calculator </h3>
-
                 <div className="subnetting-form-class">
                     <Form inline>
                         <FormGroup
@@ -126,7 +134,7 @@ export default class Subnetting extends Component {
 
                     </Form>
                 </div>
-                <div className="subnetting-field-class">
+                <div className={fieldClass}>
                     <div>
                         <div className="subnetting-field-title"> Netmask </div> <div className="field-value"> {this.getNetmask()} </div>
                     </div>
