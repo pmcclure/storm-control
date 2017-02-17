@@ -21,8 +21,7 @@
 	"start": "node .\\server\\index.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "eject": "react-scripts eject"
   },
   "engines":{
 	"node":"6.7.0"
