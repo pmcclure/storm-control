@@ -5,6 +5,7 @@ import App from './components/App/App';
 import About from './components/About/About';
 import NotFound from './components/NotFound/NotFound';
 import Subnetting from './components/Subnetting/Subnetting';
+import Dns from './components/Dns/Dns';
 import WhoIs from './components/WhoIs/WhoIs';
 import Converter from './components/Converter/Converter';
 import Bgp from './components/Bgp/Bgp';
@@ -17,6 +18,7 @@ const Routes = (props) => (
 			<Route path="/subnetting" component={Subnetting} />
 			<Route path="/converter" component={Converter} />
             <Route path="/bitsnbytes" component={BitsnBytes} />
+            <Route path="dns" component={Dns} />
 			<Route path="/whois" component={WhoIs} />
 			<Route path="/bgp" component={Bgp} />
 			<Route path="/about" component={About} />

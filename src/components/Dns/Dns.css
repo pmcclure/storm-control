@@ -1,0 +1,17 @@
+.dns-root-div{
+    padding-left: 30px;
+    padding-top: 15px;
+}
+
+.dns-form-class {
+    padding-top: 30px;
+	width: 300px;
+}
+
+
+.dns-results {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	color: #BE5108;
+	font-weight: bold;
+}
+

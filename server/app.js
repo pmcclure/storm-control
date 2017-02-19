@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+var dn = require('dn');
 
 var whoisLookup = require('./whois-server');
 
@@ -19,9 +20,19 @@ app.get('/api/whois', (req, res) => {
 	});
 });
 
+app.get('/api/dns', (req, res) => {
+	res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+	
+	dn.dig(req.query.dnsquery, function (err, returnValue) {
+        if (returnValue !== null) {
+            res.write(JSON.stringify(returnValue));
+        }
+		res.end();
+	});
+});
+
 app.get('*', (req, res) => {
 	res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
 });
 
 module.exports = app;
-

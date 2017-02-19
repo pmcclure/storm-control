@@ -45,7 +45,6 @@ export default class Bgp extends Component {
                 });
         }
         else {
-            console.log('error');
             this.setState.holder = '';
         }
 

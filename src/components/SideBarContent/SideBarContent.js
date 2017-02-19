@@ -50,6 +50,11 @@ const SideBarContent = (props) => {
 					<div className="linkFade">Bits/Bytes</div>
 				</Link>
 			</div>
+            <div>
+				<Link to="/dns" style={styles.sidebarLink}>
+					<div className="linkFade">DNS Lookup</div>
+				</Link>
+			</div>
 			<div>
 				<Link to="/whois" style={styles.sidebarLink}>
 					<div className="linkFade">Who Is</div>

@@ -10,7 +10,6 @@ const PrefixCard = ({prefix}) => {
 		<div>
 			<ul>
 				{prefix.prefixes.map((singlePrefix) => {
-					//console.log(singlePrefix)
 					return <li key={Math.random()}>{singlePrefix} </li>
 				})}
 			</ul>
