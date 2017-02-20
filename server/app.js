@@ -24,9 +24,12 @@ app.get('/api/dns', (req, res) => {
 	res.header("Access-Control-Allow-Origin", "http://localhost:3000");
 	
 	dn.dig(req.query.dnsquery, function (err, returnValue) {
-        if (returnValue !== null) {
+        if (!err) {
             res.write(JSON.stringify(returnValue));
         }
+		else {
+			console.log(err);
+		}
 		res.end();
 	});
 });
