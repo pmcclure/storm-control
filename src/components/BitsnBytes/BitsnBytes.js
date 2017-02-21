@@ -37,7 +37,6 @@ export default class BitsnBytes extends Component {
 		else {
 			this.conversion = this.conversion.fill('');
 		};
-
 	}
 
 	handleChangeInput(e) {

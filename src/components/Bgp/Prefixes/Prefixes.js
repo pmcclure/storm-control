@@ -15,10 +15,6 @@ const Prefixes = ({prefixesData}) => {
         transitionDuration: 1
     };
 
-    var style = {
-
-    };
-
     var childElements = prefixesData.locations.map((prefixData) => {
         return (
             <Panel className="panel" key={prefixData.country} header={`Country: ${prefixData.country}`} >
@@ -31,14 +27,7 @@ const Prefixes = ({prefixesData}) => {
         <div className="masonry-container">
             <h4>Prefixes</h4>
 
-            <Masonry
-                className={'my-gallery-class'} // default ''
-                style={style}
-                elementType={'div'} // default 'div'
-                options={masonryOptions} // default {}
-                disableImagesLoaded={false} // default false
-                updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
-            >
+            <Masonry options={masonryOptions}>
                 {childElements}
             </Masonry>
         </div>

@@ -8,10 +8,10 @@
 	width: 300px;
 }
 
-
-.dns-results {
-    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-	color: #BE5108;
-	font-weight: bold;
+.record-class{
+    padding-top: 10px;
 }
 
+.record-class-hidden{
+    display: none;
+}
