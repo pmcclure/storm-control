@@ -23,7 +23,7 @@ export default class BitsnBytes extends Component {
 		const length = this.state.input.length;
 		if (this.state.input === '') return null
 		else if (length > 50) return 'error';
-		else if ((/^\d+$/.test(this.state.input))) return 'success';
+		else if ((/^\d*\.?\d*$/.test(this.state.input))) return 'success';
 		else return 'error';
 	}
 
