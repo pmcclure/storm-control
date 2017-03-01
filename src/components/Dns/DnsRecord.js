@@ -12,8 +12,7 @@ const DnsRecords = ({dnsRecordData}) => {
     }
 
     var masonryOptions = {
-        transitionDuration: 1,
-        columnWidth: 500
+        transitionDuration: 1,  
     };
 
     var aRecords = dnsRecordData.filter((data) => { return data.type === "A" });

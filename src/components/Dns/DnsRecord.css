@@ -2,12 +2,4 @@
 	max-width: 1500px;
 }
 
-.dnsrecord-panel {
-	column-width: 300px;
-	margin: 10px;
-    color: green;
-}
 
-.dnsrecord-panel > .dnsrecord-panel-heading {
-	color: #BE5108;
-}

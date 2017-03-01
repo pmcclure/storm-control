@@ -1,12 +1,15 @@
 .masonry-container {
-	max-width: 900px;
+	max-width: 1500px;
 }
 
 .panel {
-	width: 200px;
 	margin: 10px;
+      width: 300px;
 }
 
 .panel > .panel-heading {
 	color: #BE5108;
+    background-image: none;
+    background-color: #fff;
+    border-color: #ddd;
 }
