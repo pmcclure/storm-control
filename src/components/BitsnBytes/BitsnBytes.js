@@ -4,7 +4,7 @@ import * as bits2bytes from 'bits2bytes';
 
 import './BitsnBytes.css';
 
-export default class BitsnBytes extends Component {
+class BitsnBytes extends Component {
 	constructor(props) {
 		super(props);
 
@@ -125,3 +125,5 @@ export default class BitsnBytes extends Component {
 		)
 	}
 }
+
+export default BitsnBytes;

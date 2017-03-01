@@ -4,7 +4,7 @@ import { Netmask } from 'netmask';
 
 import './Subnetting.css';
 
-export default class Subnetting extends Component {
+class Subnetting extends Component {
     constructor(props) {
         super(props);
 
@@ -16,7 +16,6 @@ export default class Subnetting extends Component {
         this.handleChangeSubnet = this.handleChangeSubnet.bind(this)
         this.handleChangeMask = this.handleChangeMask.bind(this)
     }
-
 
     getValidationStateSubnet() {
         if (this.state.subnet === '') return null
@@ -130,8 +129,6 @@ export default class Subnetting extends Component {
                             <FormControl.Feedback />
                             <HelpBlock>Enter a Mask (eg 24)</HelpBlock>
                         </FormGroup>
-
-
                     </Form>
                 </div>
                 <div className={fieldClass}>
@@ -157,8 +154,9 @@ export default class Subnetting extends Component {
                         <div className="subnetting-field-title"> Broadcast Address </div> <div className="subnetting-field-value"> {this.getBroadcastAddress()} </div>
                     </div>
                 </div>
-
             </div>
         );
     }
 }
+
+export default Subnetting;

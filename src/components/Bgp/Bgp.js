@@ -5,8 +5,7 @@ import axios from 'axios';
 import './Bgp.css';
 import Prefixes from './Prefixes/Prefixes';
 
-export default class Bgp extends Component {
-
+class Bgp extends Component {
     constructor(props) {
         super(props);
 
@@ -18,7 +17,6 @@ export default class Bgp extends Component {
         this.handleChangeBgp = this.handleChangeBgp.bind(this);
         this.getBgpData = this.getBgpData.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-
     }
 
     getValidationStateBgp() {
@@ -36,7 +34,6 @@ export default class Bgp extends Component {
                 axios.get(`https://stat.ripe.net/data/geoloc/data.json?resource=${bgpQuery}`)
             ])
                 .then(axios.spread((overview, geoData) => {
-                    //console.log(geoData.data.data)
                     this.setState({ holder: overview.data.data.holder });
                     this.setState({ geoData: geoData.data.data });
                 }))
@@ -47,7 +44,6 @@ export default class Bgp extends Component {
         else {
             this.setState.holder = '';
         }
-
     }
 
     handleChangeBgp(e) {
@@ -85,13 +81,12 @@ export default class Bgp extends Component {
                     	<h3>{this.state.holder}</h3>
 					</div>
 					<div>
-						<Prefixes prefixesData={this.state.geoData}/>
-						
+						<Prefixes prefixesData={this.state.geoData}/>					
 					</div>
-
-
                 </div>
             </div>
         )
     }
 }
+
+export default Bgp;

@@ -4,8 +4,7 @@ import axios from 'axios';
 
 import './WhoIs.css';
 
-export default class WhoIs extends Component {
-
+class WhoIs extends Component {
     constructor(props) {
         super(props);
 
@@ -85,3 +84,5 @@ export default class WhoIs extends Component {
         );
     }
 }
+
+export default WhoIs;

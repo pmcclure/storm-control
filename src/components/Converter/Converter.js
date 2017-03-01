@@ -3,7 +3,7 @@ import { Form, FormGroup, FormControl, HelpBlock } from 'react-bootstrap'
 
 import './Converter.css';
 
-export default class Converter extends Component {
+class Converter extends Component {
 	constructor(props) {
 		super(props);
 
@@ -66,7 +66,6 @@ export default class Converter extends Component {
 		else if (this.getValidationStateBinary() === 'success') return parseInt(this.state.binary, 2).toString(16).toUpperCase();
 		else if ((this.getValidationStateDecimal() === 'error') || (this.getValidationStateBinary() === 'error') || (this.getValidationStateHex() === 'error')) return 'Nope!'
 		else return '';
-
 	}
 
 	handleChangeDecimal(e) {
@@ -160,3 +159,5 @@ export default class Converter extends Component {
 		);
 	}
 }
+
+export default Converter;

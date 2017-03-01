@@ -5,7 +5,6 @@ import { Panel } from 'react-bootstrap';
 import './DnsRecord.css';
 
 const DnsRecords = ({dnsRecordData}) => {
-
     //If the dnsRecordData object is empty then return an empty div
     if (Object.keys(dnsRecordData).length === 0 && dnsRecordData.constructor === Object) {
         return <div></div>
@@ -92,7 +91,6 @@ const DnsRecords = ({dnsRecordData}) => {
     return (
         <div className="dnsrecord-masonry-container">
             <h4>DNS Records</h4>
-
             <Masonry options={masonryOptions}>
                 {aElements}
                 {aaaaElements}
@@ -103,7 +101,6 @@ const DnsRecords = ({dnsRecordData}) => {
             </Masonry>
         </div>
     )
-
 }
 
 export default DnsRecords;

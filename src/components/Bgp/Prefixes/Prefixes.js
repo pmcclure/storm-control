@@ -5,7 +5,6 @@ import PrefixCard from './PrefixCard';
 import './Prefixes.css';
 
 const Prefixes = ({prefixesData}) => {
-
     //If the prefixesData object is empty then return an empty div
     if (Object.keys(prefixesData).length === 0 && prefixesData.constructor === Object) {
         return <div></div>

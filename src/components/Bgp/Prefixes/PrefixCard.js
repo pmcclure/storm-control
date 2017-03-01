@@ -3,8 +3,6 @@ import React from 'react';
 import './PrefixCard.css';
 
 const PrefixCard = ({prefix}) => {
-
-
 	return (
 
 		<div>
