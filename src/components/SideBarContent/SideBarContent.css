@@ -10,3 +10,9 @@
   color: #BE5108;
   cursor: pointer;
 }
+
+.github-footer {
+	position: absolute;
+	padding-left: 70px;
+    bottom: 20px;
+}

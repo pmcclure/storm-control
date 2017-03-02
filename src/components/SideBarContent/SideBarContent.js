@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 
 import './SideBarContent.css';
 import stormOrange from './stormOrange.png';
+import githubFooter from './github-footer.png';
 
 const styles = {
 	sidebar: {
@@ -26,6 +27,7 @@ const styles = {
         paddingTop: '25px',
 		height: '100%',
 		backgroundColor: '#232830',
+		position: 'relative'
 	},
 };
 
@@ -64,6 +66,9 @@ const SideBarContent = (props) => {
 				<Link to="/bgp" style={styles.sidebarLink}>
 					<div className="linkFade">BGP</div>
 				</Link>
+			</div>
+			<div className="github-footer">
+				<a href="https://github.com/pmcclure/storm-control" target="_blank"><img src={githubFooter} alt="Github" /></a>
 			</div>
 		</div>
 	);
