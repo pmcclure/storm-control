@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 
+import './NotFound.css';
+
 export default class NotFound extends Component {
 	render() {
 		return (
-			<div>
+			<div className="notfound-root-div">			
 				<h1>
-					404 Not Found
+					<i>Page Not Found</i>
      		   </h1>
 			</div>
 		);
