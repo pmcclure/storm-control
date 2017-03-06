@@ -10,23 +10,23 @@ app.use(express.static(path.resolve(__dirname, '..', 'build')));
 
 app.get('/api/whois', (req, res) => {
 	res.header("Access-Control-Allow-Origin", "http://localhost:3000");
-	
+
 	whoisLookup(req.query.whoisquery, function (returnValue) {
-        if (typeof returnValue === 'string') {
-            res.write(returnValue);
-        }
-		
+		if (typeof returnValue === 'string') {
+			res.write(returnValue);
+		}
+
 		res.end();
 	});
 });
 
 app.get('/api/dns', (req, res) => {
 	res.header("Access-Control-Allow-Origin", "http://localhost:3000");
-	
+
 	dn.dig(req.query.dnsquery, function (err, returnValue) {
-        if (!err) {
-            res.write(JSON.stringify(returnValue));
-        }
+		if (!err) {
+			res.write(JSON.stringify(returnValue));
+		}
 		else {
 			console.log(err);
 		}
