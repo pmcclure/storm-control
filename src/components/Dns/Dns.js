@@ -37,7 +37,7 @@ class Dns extends Component {
 	getDnsData() {
 		const dnsQuery = this.state.dns;
 		if ((this.getValidationStateDns()) === 'success') {
-			axios.get(`http://localhost:8080/api/dns?dnsquery=${dnsQuery}`)
+			axios.get(`https://stormcontrol.net/dns?dnsquery=${dnsQuery}`)
 				.then(response => {
 					this.setState({ data: response.data.answer });
 				})

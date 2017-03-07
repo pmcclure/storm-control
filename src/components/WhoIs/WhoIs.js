@@ -28,7 +28,7 @@ class WhoIs extends Component {
     getWhoisData() {
         const whoisQuery = this.state.whois;
         if ((this.getValidationStateWhois()) === 'success') {
-            axios.get(`http://localhost:8080/api/whois?whoisquery=${whoisQuery}`)
+            axios.get(`https://stormcontrol.net/api/whois?whoisquery=${whoisQuery}`)
                 .then(response => {
                     this.setState({ data: response.data });
                 })
