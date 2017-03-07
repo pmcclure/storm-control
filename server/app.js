@@ -9,7 +9,7 @@ const app = express();
 app.use(express.static(path.resolve(__dirname, '..', 'build')));
 
 app.get('/api/whois', (req, res) => {
-	res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+	res.header("Access-Control-Allow-Origin", "https://stormcontrol.net");
 
 	whoisLookup(req.query.whoisquery, function (returnValue) {
 		if (typeof returnValue === 'string') {
@@ -21,7 +21,7 @@ app.get('/api/whois', (req, res) => {
 });
 
 app.get('/api/dns', (req, res) => {
-	res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+	res.header("Access-Control-Allow-Origin", "https://stormcontrol.net");
 
 	dn.dig(req.query.dnsquery, function (err, returnValue) {
 		if (!err) {
