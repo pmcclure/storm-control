@@ -5,88 +5,92 @@ import { Netmask } from 'netmask';
 import './Subnetting.css';
 
 class Subnetting extends Component {
-    constructor(props) {
-        super(props);
+	constructor(props) {
+		super(props);
 
-        this.state = {
-            subnet: '',
-            mask: ''
-        }
+		this.state = {
+			subnet: '',
+			mask: ''
+		}
 
-        this.handleChangeSubnet = this.handleChangeSubnet.bind(this)
-        this.handleChangeMask = this.handleChangeMask.bind(this)
-    }
+		this.handleChangeSubnet = this.handleChangeSubnet.bind(this)
+		this.handleChangeMask = this.handleChangeMask.bind(this)
+	}
 
-    getValidationStateSubnet() {
-        if (this.state.subnet === '') return null
-        else if (/^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/.test(this.state.subnet)) return 'success';
-        else return 'error';
-    }
+	getValidationStateSubnet() {
+		const isValidIP = /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/;
 
-    getValidationStateMask() {
-        if (this.state.mask === '') return null
-        else if (/^([1-9]|[12]\d|3[0-2])$/.test(this.state.mask)) return 'success';
-        else return 'error';
-    }
+		if (this.state.subnet === '') return null
+		else if (isValidIP.test(this.state.subnet)) return 'success';
+		else return 'error';
+	}
 
-    getHosts() {
-        if ((this.getValidationStateSubnet() === 'success') && (this.getValidationStateMask() === 'success')) {
-            const hosts = new Netmask(`${this.state.subnet}/${this.state.mask}`);
-            return hosts.size;
-        }
-    }
+	getValidationStateMask() {
+		const isValidSubnetMask = /^([1-9]|[12]\d|3[0-2])$/;
+		
+		if (this.state.mask === '') return null
+		else if (isValidSubnetMask.test(this.state.mask)) return 'success';
+		else return 'error';
+	}
 
-    getWildcard() {
-        if ((this.getValidationStateSubnet() === 'success') && (this.getValidationStateMask() === 'success')) {
-            const subnet = new Netmask(`${this.state.subnet}/${this.state.mask}`);
-            return subnet.hostmask;
-        }
-    }
+	getHosts() {
+		if ((this.getValidationStateSubnet() === 'success') && (this.getValidationStateMask() === 'success')) {
+			const hosts = new Netmask(`${this.state.subnet}/${this.state.mask}`);
+			return hosts.size;
+		}
+	}
 
-    getStartAddress() {
-        if ((this.getValidationStateSubnet() === 'success') && (this.getValidationStateMask() === 'success')) {
-            const startAddress = new Netmask(`${this.state.subnet}/${this.state.mask}`);
-            return startAddress.first;
-        }
-    }
+	getWildcard() {
+		if ((this.getValidationStateSubnet() === 'success') && (this.getValidationStateMask() === 'success')) {
+			const subnet = new Netmask(`${this.state.subnet}/${this.state.mask}`);
+			return subnet.hostmask;
+		}
+	}
 
-    getEndAddress() {
-        if ((this.getValidationStateSubnet() === 'success') && (this.getValidationStateMask() === 'success')) {
-            const endAddress = new Netmask(`${this.state.subnet}/${this.state.mask}`);
-            return endAddress.last;
-        }
-    }
+	getStartAddress() {
+		if ((this.getValidationStateSubnet() === 'success') && (this.getValidationStateMask() === 'success')) {
+			const startAddress = new Netmask(`${this.state.subnet}/${this.state.mask}`);
+			return startAddress.first;
+		}
+	}
 
-    getBroadcastAddress() {
-        if ((this.getValidationStateSubnet() === 'success') && (this.getValidationStateMask() === 'success')) {
-            const broadcast = new Netmask(`${this.state.subnet}/${this.state.mask}`);
-            return broadcast.broadcast;
-        }
-    }
+	getEndAddress() {
+		if ((this.getValidationStateSubnet() === 'success') && (this.getValidationStateMask() === 'success')) {
+			const endAddress = new Netmask(`${this.state.subnet}/${this.state.mask}`);
+			return endAddress.last;
+		}
+	}
 
-    getNetworkAddress() {
-        if ((this.getValidationStateSubnet() === 'success') && (this.getValidationStateMask() === 'success')) {
-            const networkAddress = new Netmask(`${this.state.subnet}/${this.state.mask}`);
-            return networkAddress.base;
-        }
-    }
+	getBroadcastAddress() {
+		if ((this.getValidationStateSubnet() === 'success') && (this.getValidationStateMask() === 'success')) {
+			const broadcast = new Netmask(`${this.state.subnet}/${this.state.mask}`);
+			return broadcast.broadcast;
+		}
+	}
 
-    getNetmask() {
-        if ((this.getValidationStateSubnet() === 'success') && (this.getValidationStateMask() === 'success')) {
-            const netMask = new Netmask(`${this.state.subnet}/${this.state.mask}`);
-            return netMask.mask;
-        }
-    }
+	getNetworkAddress() {
+		if ((this.getValidationStateSubnet() === 'success') && (this.getValidationStateMask() === 'success')) {
+			const networkAddress = new Netmask(`${this.state.subnet}/${this.state.mask}`);
+			return networkAddress.base;
+		}
+	}
 
-    handleChangeSubnet(e) {
-        this.setState({ subnet: e.target.value });
-    }
+	getNetmask() {
+		if ((this.getValidationStateSubnet() === 'success') && (this.getValidationStateMask() === 'success')) {
+			const netMask = new Netmask(`${this.state.subnet}/${this.state.mask}`);
+			return netMask.mask;
+		}
+	}
 
-    handleChangeMask(e) {
-        this.setState({ mask: e.target.value });
-    }
+	handleChangeSubnet(e) {
+		this.setState({ subnet: e.target.value });
+	}
 
-    render() {
+	handleChangeMask(e) {
+		this.setState({ mask: e.target.value });
+	}
+
+	render() {
 		var fieldClass = 'bitsnbytes-field-class-hidden';
 
 		if ((this.getValidationStateSubnet() === 'success') && (this.getValidationStateMask() === 'success')) {
@@ -96,67 +100,67 @@ class Subnetting extends Component {
 			fieldClass = 'bitsnbytes-field-class-hidden';
 		}
 
-        return (
-            <div className="subnetting-root-div">
-                <h3> Subnet Calculator </h3>
-                <div className="subnetting-form-class">
-                    <Form inline>
-                        <FormGroup
-                            controlId="formSubnet"
-                            validationState={this.getValidationStateSubnet()}
-                        >
-                            <FormControl
-                                type="text"
-                                value={this.state.subnet}
-                                placeholder="Subnet"
-                                onChange={this.handleChangeSubnet}
-                            />
-                            <FormControl.Feedback />
-                            <HelpBlock>Enter an IP address</HelpBlock>
-                        </FormGroup>
-                        <span className="subnetting-slash">/</span>
+		return (
+			<div className="subnetting-root-div">
+				<h3> Subnet Calculator </h3>
+				<div className="subnetting-form-class">
+					<Form inline>
+						<FormGroup
+							controlId="formSubnet"
+							validationState={this.getValidationStateSubnet()}
+						>
+							<FormControl
+								type="text"
+								value={this.state.subnet}
+								placeholder="Subnet"
+								onChange={this.handleChangeSubnet}
+							/>
+							<FormControl.Feedback />
+							<HelpBlock>Enter an IP address</HelpBlock>
+						</FormGroup>
+						<span className="subnetting-slash">/</span>
 
-                        <FormGroup
-                            controlId="formMask"
-                            validationState={this.getValidationStateMask()}
-                        >
-                            <FormControl
-                                type="text"
-                                value={this.state.mask}
-                                placeholder="Mask"
-                                onChange={this.handleChangeMask}
-                            />
-                            <FormControl.Feedback />
-                            <HelpBlock>Enter a Mask (eg 24)</HelpBlock>
-                        </FormGroup>
-                    </Form>
-                </div>
-                <div className={fieldClass}>
-                    <div>
-                        <div className="subnetting-field-title"> Netmask </div> <div className="subnetting-field-value"> {this.getNetmask()} </div>
-                    </div>
-                    <div>
-                        <div className="subnetting-field-title"> Wildcard </div> <div className="subnetting-field-value"> {this.getWildcard()} </div>
-                    </div>
-                    <div>
-                        <div className="subnetting-field-title"> Addresses </div> <div className="subnetting-field-value"> {this.getHosts()} </div>
-                    </div>
-                    <div>
-                        <div className="subnetting-field-title"> Host Start Address </div> <div className="subnetting-field-value"> {this.getStartAddress()} </div>
-                    </div>
-                    <div>
-                        <div className="subnetting-field-title"> Host End Address </div> <div className="subnetting-field-value"> {this.getEndAddress()} </div>
-                    </div>
-                    <div>
-                        <div className="subnetting-field-title"> Network Address </div> <div className="subnetting-field-value"> {this.getNetworkAddress()} </div>
-                    </div>
-                    <div>
-                        <div className="subnetting-field-title"> Broadcast Address </div> <div className="subnetting-field-value"> {this.getBroadcastAddress()} </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+						<FormGroup
+							controlId="formMask"
+							validationState={this.getValidationStateMask()}
+						>
+							<FormControl
+								type="text"
+								value={this.state.mask}
+								placeholder="Mask"
+								onChange={this.handleChangeMask}
+							/>
+							<FormControl.Feedback />
+							<HelpBlock>Enter a Mask (eg 24)</HelpBlock>
+						</FormGroup>
+					</Form>
+				</div>
+				<div className={fieldClass}>
+					<div>
+						<div className="subnetting-field-title"> Netmask </div> <div className="subnetting-field-value"> {this.getNetmask()} </div>
+					</div>
+					<div>
+						<div className="subnetting-field-title"> Wildcard </div> <div className="subnetting-field-value"> {this.getWildcard()} </div>
+					</div>
+					<div>
+						<div className="subnetting-field-title"> Addresses </div> <div className="subnetting-field-value"> {this.getHosts()} </div>
+					</div>
+					<div>
+						<div className="subnetting-field-title"> Host Start Address </div> <div className="subnetting-field-value"> {this.getStartAddress()} </div>
+					</div>
+					<div>
+						<div className="subnetting-field-title"> Host End Address </div> <div className="subnetting-field-value"> {this.getEndAddress()} </div>
+					</div>
+					<div>
+						<div className="subnetting-field-title"> Network Address </div> <div className="subnetting-field-value"> {this.getNetworkAddress()} </div>
+					</div>
+					<div>
+						<div className="subnetting-field-title"> Broadcast Address </div> <div className="subnetting-field-value"> {this.getBroadcastAddress()} </div>
+					</div>
+				</div>
+			</div>
+		);
+	}
 }
 
 export default Subnetting;

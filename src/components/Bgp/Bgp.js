@@ -22,7 +22,6 @@ class Bgp extends Component {
     getValidationStateBgp() {
         if (this.state.bgp === '') return null
         else if (this.state.bgp >= 1 && this.state.bgp <= 64511) return 'success';
-        else if (/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/.test(this.state.whois)) return 'success';
         else return 'error';
     }
 

@@ -20,10 +20,11 @@ class BitsnBytes extends Component {
 	}
 
 	getValidationStateInput() {
+		const isValidDecimal = /^\d*\.?\d*$/;
 		const length = this.state.input.length;
 		if (this.state.input === '') return null
 		else if (length > 50) return 'error';
-		else if ((/^\d*\.?\d*$/.test(this.state.input))) return 'success';
+		else if ((isValidDecimal.test(this.state.input))) return 'success';
 		else return 'error';
 	}
 
