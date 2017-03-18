@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "axios": "^0.15.3",
+    "bits2bytes": "^1.0.0",
     "bootstrap": "^3.3.7",
     "dn": "^0.1.5",
     "express": "^4.15.2",

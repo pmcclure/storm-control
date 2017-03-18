@@ -31,7 +31,6 @@ class Dns extends Component {
 		const isValidURL = /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/;
 
 		if (this.state.dns === '') return null
-		else if (isValidIP.test(this.state.dns)) return 'success';
 		else if (isValidURL.test(this.state.dns)) return 'success';
 		else return 'error';
 	}
