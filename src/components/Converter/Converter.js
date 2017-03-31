@@ -20,30 +20,30 @@ class Converter extends Component {
 
 	getValidationStateDecimal() {
 		const isValidDecimal = /^\d+$/;
-        const length = this.state.decimal.length;
+       		const length = this.state.decimal.length;
 		
 		if (this.state.decimal === '') return null
-        else if (length > 16) return 'error';
+        	else if (length > 16) return 'error';
 		else if ((isValidDecimal.test(this.state.decimal)) && (this.state.binary === '') && (this.state.hex === '')) return 'success';
 		else return 'error';
 	}
 
 	getValidationStateBinary() {
 		const isValidBinary = /^[0-1]*$/
-        const length = this.state.binary.length;
+        	const length = this.state.binary.length;
 
 		if (this.state.binary === '') return null
-        else if (length > 80) return 'error';
+       		else if (length > 80) return 'error';
 		else if ((isValidBinary.test(this.state.binary)) && (this.state.decimal === '') && (this.state.hex === '')) return 'success';
 		else return 'error';
 	}
 
 	getValidationStateHex() {
 		const isvalidHex = /^[0-9A-Fa-f]+$/;
-        const length = this.state.hex.length;
+        	const length = this.state.hex.length;
 		
 		if (this.state.hex === '') return null
-        else if (length > 13) return 'error';
+        	else if (length > 13) return 'error';
 		else if ((isvalidHex.test(this.state.hex)) && (this.state.decimal === '') && (this.state.binary === '')) return 'success';
 		else return 'error';
 	}
