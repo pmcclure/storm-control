@@ -17,8 +17,8 @@ const Routes = (props) => (
 			<IndexRoute component={Subnetting} />
 			<Route path="/subnetting" component={Subnetting} />
 			<Route path="/converter" component={Converter} />
-            <Route path="/bitsnbytes" component={BitsnBytes} />
-            <Route path="dns" component={Dns} />
+            		<Route path="/bitsnbytes" component={BitsnBytes} />
+            		<Route path="dns" component={Dns} />
 			<Route path="/whois" component={WhoIs} />
 			<Route path="/bgp" component={Bgp} />
 			<Route path="/about" component={About} />
