@@ -21,7 +21,7 @@ class Bgp extends Component {
 
     getValidationStateBgp() {
         if (this.state.bgp === '') return null
-        else if (this.state.bgp >= 1 && this.state.bgp <= 64511) return 'success';
+        else if (this.state.bgp >= 1 && this.state.bgp <= 4200000000) return 'success';
         else return 'error';
     }
 
@@ -71,7 +71,7 @@ class Bgp extends Component {
                                 onChange={this.handleChangeBgp}
                             />
                             <Button type="submit">Submit</Button>
-                            <HelpBlock>Enter a BGP ASN (1-64511) </HelpBlock>
+                            <HelpBlock>Enter a BGP ASN</HelpBlock>
                         </FormGroup>
                     </Form>
                 </div>
