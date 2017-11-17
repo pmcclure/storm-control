@@ -59,7 +59,7 @@ const SideBarContent = (props) => {
 			</div>
 			<div>
 				<Link to="/whois" style={styles.sidebarLink}>
-					<div className="linkFade">Who Is</div>
+					<div className="linkFade">Whois</div>
 				</Link>
 			</div>
 			<div>
