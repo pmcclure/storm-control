@@ -104,7 +104,7 @@ class Subnetting extends Component {
 			<div className="subnetting-root-div">
 				<h3> Subnet Calculator </h3>
 				<div className="subnetting-form-class">
-					<Form inline>
+					<Form inline className="subnet-inline">
 						<FormGroup
 							controlId="formSubnet"
 							validationState={this.getValidationStateSubnet()}

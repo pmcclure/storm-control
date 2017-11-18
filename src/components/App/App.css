@@ -16,3 +16,11 @@ drawer {
     transform: translateX(0%);
     box-shadow: rgba(0, 0, 0, 0.14902) 2px 2px 4px;
 }
+
+.sidebarClass {
+    z-index: 4 !important;
+}
+
+.overlayClass {
+    z-index: 3 !important;
+}

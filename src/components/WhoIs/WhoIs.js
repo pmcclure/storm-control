@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, FormGroup, FormControl, HelpBlock, Button } from 'react-bootstrap'
+import { Form, FormGroup, FormControl, HelpBlock, Button, InputGroup } from 'react-bootstrap'
 import axios from 'axios';
 
 import './WhoIs.css';
@@ -62,13 +62,17 @@ class WhoIs extends Component {
                 <div className="whois-form-class">
                     <Form inline onSubmit={this.handleSubmit}>
                         <FormGroup controlId="formWhois" validationState={this.getValidationStateWhois()}>
-                            <FormControl
-                                type="text"
-                                value={this.state.whois}
-                                placeholder="Whois"
-                                onChange={this.handleChangeWhois}
-                            />
-                            <Button type="submit">Submit</Button>
+                            <InputGroup>
+                                <FormControl
+                                    type="text"
+                                    value={this.state.whois}
+                                    placeholder="Whois"
+                                    onChange={this.handleChangeWhois}
+                                />
+                                <InputGroup.Button>
+                                    <Button type="submit">Submit</Button>
+                                </InputGroup.Button>
+                            </InputGroup>
                             <HelpBlock>Enter an IP address or URL</HelpBlock>
                         </FormGroup>
                     </Form>

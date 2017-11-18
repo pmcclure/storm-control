@@ -1,6 +1,5 @@
 .subnetting-root-div{
-    padding-left: 30px;
-    padding-top: 15px;
+    padding: 15px 30px;
 }
 
 .subnetting-form-class {
@@ -8,7 +7,9 @@
 }
 
 .subnetting-slash {
-    font-size: 50px;
+    font-size: 32px;
+    padding: 0px 5px;
+    margin-top: -5px;
 }
 
 .subnetting-field-class {
@@ -34,3 +35,6 @@
 	color: #BE5108;
 }
 
+.subnet-inline {
+	display: flex;
+}

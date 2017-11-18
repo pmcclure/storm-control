@@ -1,9 +1,21 @@
 import React, { Component } from 'react';
-var Sidebar = require('react-sidebar').default;
-
 import './App.css';
-
 import SidebarContent from '../SideBarContent/SideBarContent';
+import Header from '../Header/Header';
+const Sidebar = require('react-sidebar').default;
+
+
+const mql = window.matchMedia(`(min-width: 800px)`); 
+const styles = {
+  contentHeaderMenuLink: {
+    textDecoration: 'none',
+    color: '#be5108',
+    padding: 8,
+  },
+  content: {
+    padding: '16px',
+  },
+};
 
 class App extends Component {
 	constructor(props) {
@@ -12,16 +24,19 @@ class App extends Component {
 		this.state = {
 			sidebarOpen: false,
 			sidebarDocked: false,
-			mql: undefined
+			mql: mql
 		}
+
+		this.mediaQueryChanged = this.mediaQueryChanged.bind(this);
+		this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
+		this.toggleOpen = this.toggleOpen.bind(this);
 	}
 
 	onSetSidebarOpen(open) {
 		this.setState({ sidebarOpen: open });
 	}
 
-	componentDidMount() {
-		var mql = window.matchMedia(`(min-width: 800px)`);
+	componentWillMount() {
 		mql.addListener(this.mediaQueryChanged.bind(this));
 		this.setState({ mql: mql, sidebarDocked: mql.matches });
 	}
@@ -34,23 +49,42 @@ class App extends Component {
 		this.setState({ sidebarDocked: this.state.mql.matches });
 	}
 
+	toggleOpen(ev) {
+	    this.setState({sidebarOpen: !this.state.sidebarOpen});
+
+	    if (ev) {
+	        ev.preventDefault();
+	    }
+	}
+
 	sidebarStyles = {
 		root: {left: 0},
-		content: { overflowY: 'scroll', WebkitOverflowScrolling: 'touch' },      
+		content: { overflowY: 'scroll', WebkitOverflowScrolling: 'touch'},      
 	}
 
 	render() {
 		const sidebarContent =<SidebarContent />;
 
+    	const contentHeader = (
+			<span>
+				{!this.state.sidebarDocked && <a onClick={this.toggleOpen.bind(this)} href="#" style={styles.contentHeaderMenuLink}>=</a>}
+				<span> Storm Control</span>
+			</span>
+        );
+
 		return (
 			<div>
 				<Sidebar
 					styles={this.sidebarStyles}
+					sidebarClassName={'sidebarClass'}
+					overlayClassName={'overlayClass'}
 					sidebar={sidebarContent}
 					open={this.state.sidebarOpen}
 					docked={this.state.sidebarDocked}
 					onSetOpen={this.onSetSidebarOpen}>
-					{this.props.children}
+					<Header title={contentHeader}>
+						{this.props.children}
+					</Header>
 				</Sidebar>
 			</div>
 		);

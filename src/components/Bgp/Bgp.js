@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, FormGroup, FormControl, HelpBlock, Button } from 'react-bootstrap'
+import { Form, FormGroup, FormControl, HelpBlock, Button, InputGroup } from 'react-bootstrap'
 import axios from 'axios';
 
 import './Bgp.css';
@@ -64,13 +64,17 @@ class Bgp extends Component {
                             controlId="formBgp"
                             validationState={this.getValidationStateBgp()}
                         >
-                            <FormControl
-                                type="text"
-                                value={this.state.bgp}
-                                placeholder="BGP"
-                                onChange={this.handleChangeBgp}
-                            />
-                            <Button type="submit">Submit</Button>
+                            <InputGroup>
+                                <FormControl
+                                    type="text"
+                                    value={this.state.bgp}
+                                    placeholder="BGP"
+                                    onChange={this.handleChangeBgp}
+                                />
+                                <InputGroup.Button>
+                                    <Button type="submit">Submit</Button>
+                                </InputGroup.Button>
+                            </InputGroup>
                             <HelpBlock>Enter a BGP ASN</HelpBlock>
                         </FormGroup>
                     </Form>

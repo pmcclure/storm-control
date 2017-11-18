@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, FormGroup, FormControl, HelpBlock, Button } from 'react-bootstrap'
+import { Form, FormGroup, FormControl, HelpBlock, Button, InputGroup } from 'react-bootstrap'
 import axios from 'axios';
 
 import './Dns.css';
@@ -72,13 +72,17 @@ class Dns extends Component {
 				<div className="dns-form-class">
 					<Form inline onSubmit={this.handleSubmit}>
 						<FormGroup controlId="formDns" validationState={this.getValidationStateDns()}>
-							<FormControl
-								type="text"
-								value={this.state.dns}
-								placeholder="domain"
-								onChange={this.handleChangeDns}
-							/>
-							<Button type="submit">Submit</Button>
+							<InputGroup>
+								<FormControl
+									type="text"
+									value={this.state.dns}
+									placeholder="domain"
+									onChange={this.handleChangeDns}
+								/>
+	                            <InputGroup.Button>
+									<Button type="submit">Submit</Button>
+	                            </InputGroup.Button>
+							</InputGroup>
 							<HelpBlock>Enter a domain</HelpBlock>
 						</FormGroup>
 					</Form>
