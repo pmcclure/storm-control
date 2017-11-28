@@ -68,7 +68,7 @@ class App extends Component {
     	const contentHeader = (
 			<span>
 				{!this.state.sidebarDocked && <a onClick={this.toggleOpen.bind(this)} href="#" style={styles.contentHeaderMenuLink}>=</a>}
-				<span> Storm Control</span>
+				<span> s t o r m c o n t r o l </span>
 			</span>
         );
 
