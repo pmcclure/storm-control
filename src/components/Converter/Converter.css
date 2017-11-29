@@ -8,8 +8,9 @@
 	padding-top: 30px;
 }
 
-.converter-converter-field-class {
-	padding-top: 30px;
+.converter-field-class {
+    padding-top: 30px;
+    white-space: nowrap;
 }
 
 .converter-field-class-hidden {

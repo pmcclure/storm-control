@@ -22,12 +22,11 @@
 	display: inline-block;
 	width: 200px;
 	padding-bottom: 30px;
-	font-size: 18px;
-
+    font-size: 18px;
 }
 
 .bitsnbytes-field-value {
 	display: inline-block;
 	font-size: 18px;
-	color: #BE5108;
+    color: #BE5108;
 }
