@@ -5,11 +5,12 @@
 
 .bitsnbytes-form-class {
     width: 500px;
-	padding-top: 30px;
+    padding-top: 30px;
 }
 
 .bitsnbytes-field-class {
-	padding-top: 30px;
+    padding-top: 30px;
+    white-space: nowrap;
 }
 
 .bitsnbytes-field-class-hidden {

@@ -91,13 +91,13 @@ class Subnetting extends Component {
 	}
 
 	render() {
-		var fieldClass = 'bitsnbytes-field-class-hidden';
+		var fieldClass = 'subnetting-field-class-hidden';
 
 		if ((this.getValidationStateSubnet() === 'success') && (this.getValidationStateMask() === 'success')) {
-			fieldClass = 'bitsnbytes-field-class';
+			fieldClass = 'subnetting-field-class';
 		}
 		else {
-			fieldClass = 'bitsnbytes-field-class-hidden';
+			fieldClass = 'subnetting-field-class-hidden';
 		}
 
 		return (
