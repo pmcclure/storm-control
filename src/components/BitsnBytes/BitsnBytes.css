@@ -8,6 +8,13 @@
     padding-top: 30px;
 }
 
+.bitnsbytes-form-select {
+    height: 34px;
+    margin-left: 2px;
+    border-radius: 3px;
+    color: #646464;
+}
+
 .bitsnbytes-field-class {
     padding-top: 30px;
     white-space: nowrap;

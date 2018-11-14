@@ -146,14 +146,14 @@ class Subnetting extends Component {
 						<div className="subnetting-field-title"> Addresses </div> <div className="subnetting-field-value"> {this.getHosts()} </div>
 					</div>
 					<div>
+						<div className="subnetting-field-title"> Network Address </div> <div className="subnetting-field-value"> {this.getNetworkAddress()} </div>
+					</div>
+					<div>
 						<div className="subnetting-field-title"> Host Start Address </div> <div className="subnetting-field-value"> {this.getStartAddress()} </div>
 					</div>
 					<div>
 						<div className="subnetting-field-title"> Host End Address </div> <div className="subnetting-field-value"> {this.getEndAddress()} </div>
-					</div>
-					<div>
-						<div className="subnetting-field-title"> Network Address </div> <div className="subnetting-field-value"> {this.getNetworkAddress()} </div>
-					</div>
+					</div>					
 					<div>
 						<div className="subnetting-field-title"> Broadcast Address </div> <div className="subnetting-field-value"> {this.getBroadcastAddress()} </div>
 					</div>

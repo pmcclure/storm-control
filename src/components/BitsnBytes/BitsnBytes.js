@@ -73,13 +73,12 @@ class BitsnBytes extends Component {
 								onChange={this.handleChangeInput}
 							/>
 						</FormGroup>
-
 						<FormGroup controlId="formBitsSelection" >
-							<FormControl componentClass="select" placeholder="select" onChange={this.handleChangeSelection}>
+							<FormControl componentClass="select" placeholder="select" onChange={this.handleChangeSelection} bsClass="bitnsbytes-form-select" >
 								<option value="b">Bits</option>
 								<option value="B">Bytes</option>
 								<option value="kb">Kilobits</option>
-								<option value="kB">KiloBytes</option>
+								<option value="kB">Kilobytes</option>
 								<option value="mb">Megabits</option>
 								<option value="mB">Megabytes</option>
 								<option value="gb">Gigabits</option>
@@ -87,7 +86,7 @@ class BitsnBytes extends Component {
 								<option value="tb">Terabits</option>
 								<option value="tB">Terabytes</option>
 							</FormControl>
-						</FormGroup>
+						</FormGroup>				
 					</Form>
 				</div>
 				<div className={fieldClass}>
@@ -101,7 +100,7 @@ class BitsnBytes extends Component {
 						<div className="bitsnbytes-field-title"> Kilobits </div> <div className="bitsnbytes-field-value"> {this.conversion[2]} </div>
 					</div>
 					<div>
-						<div className="bitsnbytes-field-title"> KiloBytes </div> <div className="bitsnbytes-field-value"> {this.conversion[3]} </div>
+						<div className="bitsnbytes-field-title"> Kilobytes </div> <div className="bitsnbytes-field-value"> {this.conversion[3]} </div>
 					</div>
 					<div>
 						<div className="bitsnbytes-field-title"> Megabits </div> <div className="bitsnbytes-field-value"> {this.conversion[4]} </div>
