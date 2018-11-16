@@ -2,4 +2,8 @@
 	max-width: 1500px;
 }
 
-
+.dnsrecord-panel {
+	margin: 10px;
+      width: 300px;
+      word-wrap: break-word;
+}

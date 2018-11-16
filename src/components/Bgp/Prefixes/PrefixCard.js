@@ -5,7 +5,7 @@ import './PrefixCard.css';
 const PrefixCard = ({prefix}) => {
 	return (
 
-		<div>
+		<div className="panel-body">
 			<ul>
 				{prefix.prefixes.map((singlePrefix) => {
 					return <li key={Math.random()}>{singlePrefix} </li>

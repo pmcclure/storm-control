@@ -38,7 +38,7 @@ class Dns extends Component {
 	getDnsData() {
 		const dnsQuery = this.state.dns;
 		if ((this.getValidationStateDns()) === 'success') {
-			axios.get(`https://stormcontrol.net/api/dns?dnsquery=${dnsQuery}`)
+			axios.get(`http://localhost:8080/api/dns?dnsquery=${dnsQuery}`)
 				.then(response => {
 					this.setState({ data: response.data.answer });
 				})
@@ -76,14 +76,13 @@ class Dns extends Component {
 								<FormControl
 									type="text"
 									value={this.state.dns}
-									placeholder="domain"
+									placeholder="Enter a domain"
 									onChange={this.handleChangeDns}
 								/>
 	                            <InputGroup.Button>
 									<Button type="submit">Submit</Button>
 	                            </InputGroup.Button>
 							</InputGroup>
-							<HelpBlock>Enter a domain</HelpBlock>
 						</FormGroup>
 					</Form>
 				</div>

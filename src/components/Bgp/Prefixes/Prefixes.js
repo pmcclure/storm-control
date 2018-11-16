@@ -16,7 +16,10 @@ const Prefixes = ({prefixesData}) => {
 
     var childElements = prefixesData.locations.map((prefixData) => {
         return (
-            <Panel className="panel" key={prefixData.country} header={`Country: ${prefixData.country}`} >
+            <Panel className="panel" key={prefixData.country}>
+                <Panel.Heading className="panel-heading">
+                    <Panel.Title>Country: {prefixData.country}</Panel.Title>
+                </Panel.Heading>
                 <PrefixCard prefix={prefixData} />
             </Panel>
         )
