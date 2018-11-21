@@ -70,7 +70,7 @@ class Mac extends Component {
               'Use ' +
               '<a href="https://en.wikipedia.org/wiki/MAC_address#Notational_conventions" target="_blank" rel="noopener noreferrer">standard conventions</a>  ' +
               'e.g. <p />' + 
-              '<div style="color:#BE5108; font-size: 15px"> <b> 11.11.11.11.11.11 </b> </div><p />' +
+              '<div style="color:#BE5108; font-size: 15px"> <b> 11:11:11:11:11:11 </b> </div><p />' +
               '<div style="color:#BE5108; font-size: 15px"> <b> 11-11-11-11-11-11 </b> </div><p />' +
               '<div style="color:#BE5108; font-size: 15px"> <b> 1111.1111.1111 </b> </div><p />',
             showCloseButton: false,
