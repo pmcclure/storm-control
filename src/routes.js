@@ -6,6 +6,7 @@ import About from './components/About/About';
 import NotFound from './components/NotFound/NotFound';
 import Subnetting from './components/Subnetting/Subnetting';
 import Dns from './components/Dns/Dns';
+import Mac from './components/Mac/Mac.js';
 import WhoIs from './components/WhoIs/WhoIs';
 import Converter from './components/Converter/Converter';
 import Bgp from './components/Bgp/Bgp';
@@ -21,6 +22,7 @@ const Routes = (props) => (
             		<Route path="dns" component={Dns} />
 			<Route path="/whois" component={WhoIs} />
 			<Route path="/bgp" component={Bgp} />
+			<Route path="/mac" component={Mac} />
 			<Route path="/about" component={About} />
 			<Route path="*" component={NotFound} />
 		</Route>

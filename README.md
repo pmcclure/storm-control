@@ -13,6 +13,7 @@ Includes Tools for
 * Bits/Bytes/Megabytes etc converter
 * DNS lookup
 * Whois lookup
+* MAC address lookup
 * BGPv4 Prefix lookup
 
 ## Build

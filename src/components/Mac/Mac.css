@@ -1,0 +1,34 @@
+.mac-root-div{
+    padding-left: 30px;
+    padding-top: 15px;
+}
+
+.mac-form-class {
+    padding-top: 30px;
+	width: 300px;
+}
+
+.mac-field-class {
+    padding-top: 30px;
+    white-space: nowrap;
+}
+
+.mac-field-class-hidden {
+	padding-top: 30px;
+	display: none;
+}
+
+.mac-field-title {
+	display: inline-block;
+	width: 180px;
+	padding-bottom: 30px;
+	font-size: 18px;
+
+}
+
+.mac-field-value {
+	display: inline-block;
+	font-size: 18px;
+    color: #BE5108;
+   
+}

@@ -52,6 +52,11 @@ const SideBarContent = (props) => {
 					<div className="linkFade">Bits/Bytes</div>
 				</Link>
 			</div>
+			<div>
+				<Link to="/mac" style={styles.sidebarLink}>
+					<div className="linkFade">MAC lookup</div>
+				</Link>
+			</div>
             <div>
 				<Link to="/dns" style={styles.sidebarLink}>
 					<div className="linkFade">DNS Lookup</div>
@@ -68,7 +73,7 @@ const SideBarContent = (props) => {
 				</Link>
 			</div>
 			<div className="github-footer">
-				<a href="https://github.com/pmcclure/storm-control" target="_blank"><img src={githubFooter} alt="Github" /></a>
+				<a href="https://github.com/pmcclure/storm-control" target="_blank" rel="noopener noreferrer"><img src={githubFooter} alt="Github" /></a>
 			</div>
 		</div>
 	);

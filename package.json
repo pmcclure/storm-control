@@ -6,6 +6,7 @@
     "react-scripts": "^2.1.1"
   },
   "dependencies": {
+    "add": "^2.0.6",
     "axios": "^0.18.0",
     "bits2bytes": "^1.0.0",
     "bootstrap": "^3.3.7",
@@ -19,7 +20,8 @@
     "react-dom": "^16.6.3",
     "react-masonry-component": "^6.2.1",
     "react-router": "^3.2.1",
-    "react-sidebar": "^3.0.2"
+    "react-sidebar": "^3.0.2",
+    "sweetalert2": "^7.29.1"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -37,7 +37,6 @@ class WhoIs extends Component {
                 })
                 .catch(error => {
                     this.setState({ data: '' })
-                    console.log(error);
                 });
         }
         else {

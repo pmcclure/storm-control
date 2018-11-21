@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, FormGroup, FormControl, HelpBlock, Button, InputGroup } from 'react-bootstrap'
+import { Form, FormGroup, FormControl, Button, InputGroup } from 'react-bootstrap'
 import axios from 'axios';
 
 import './Dns.css';
@@ -38,7 +38,7 @@ class Dns extends Component {
 	getDnsData() {
 		const dnsQuery = this.state.dns;
 		if ((this.getValidationStateDns()) === 'success') {
-			axios.get(`http://localhost:8080/api/dns?dnsquery=${dnsQuery}`)
+			axios.get(`https://stormcontrol.net/api/dns?dnsquery=${dnsQuery}`)
 				.then(response => {
 					this.setState({ data: response.data.answer });
 				})
