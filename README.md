@@ -11,9 +11,9 @@ Includes Tools for
 * IPv4 Subnetting
 * Decimal/Hex/Binary converter
 * Bits/Bytes/Megabytes etc converter
+* MAC address lookup
 * DNS lookup
 * Whois lookup
-* MAC address lookup
 * BGPv4 Prefix lookup
 
 ## Build
