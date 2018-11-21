@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "f4769f9bdb7466be65088239c12046d1",
-    "url": "/static/media/glyphicons-halflings-regular.f4769f9b.eot"
+    "revision": "448c34a56d699c29117adc64c43affeb",
+    "url": "/static/media/glyphicons-halflings-regular.448c34a5.woff2"
   },
   {
     "revision": "f9536cedbe411683dec5",
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/static/js/main.f9536ced.chunk.js"
   },
   {
-    "revision": "448c34a56d699c29117adc64c43affeb",
-    "url": "/static/media/glyphicons-halflings-regular.448c34a5.woff2"
+    "revision": "f4769f9bdb7466be65088239c12046d1",
+    "url": "/static/media/glyphicons-halflings-regular.f4769f9b.eot"
   },
   {
     "revision": "fa2772327f55d8198301fdb8bcfc8158",
