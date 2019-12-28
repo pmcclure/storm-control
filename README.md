@@ -18,5 +18,8 @@ Includes Tools for
 
 ## Build
 
-Built with React/Node/Express
+~~Built with React/Node/Express~~
 
+I've moved the site from the docker containers it was on to an AWS Serverless build. 
+
+Now it's built with React/Node/AWS API Gateway/Lambda/S3 static website.
