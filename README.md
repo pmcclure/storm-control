@@ -22,4 +22,4 @@ Includes Tools for
 
 I've moved the site from the docker containers it was on to an AWS Serverless build. 
 
-Now it's built with React/Node/AWS API Gateway/Lambda/S3 static website.
+Now it's built with React/AWS API Gateway/Lambda/S3 static website.
