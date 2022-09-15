@@ -9,7 +9,7 @@
     "add": "^2.0.6",
     "axios": "^0.18.0",
     "bits2bytes": "^1.0.0",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "dn": "^0.1.5",
     "express": "^4.16.4",
     "netmask": "^1.0.6",
