@@ -11,7 +11,7 @@
     "bits2bytes": "^1.0.0",
     "bootstrap": "^3.3.7",
     "dn": "^0.1.5",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "netmask": "^1.0.6",
     "node-whois": "^2.1.3",
     "path": "^0.12.7",
