@@ -14,7 +14,6 @@ Includes Tools for
 * MAC address lookup
 * DNS lookup
 * Whois lookup
-* BGPv4 Prefix lookup
 
 ## Build
 
@@ -22,4 +21,4 @@ Includes Tools for
 
 I've moved the site from the docker containers it was on to an AWS Serverless build. 
 
-Now it's built with React/AWS API Gateway/Lambda/S3 static website.
+Now it's built with React/Cloudfront/API Gateway/Lambda/S3 static website.

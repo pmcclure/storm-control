@@ -1,12 +1,22 @@
-import React, { Component } from 'react';
-import { Form, FormGroup, FormControl, HelpBlock } from 'react-bootstrap'
+import { Component, type ChangeEvent } from 'react';
+import { Form, FormGroup, FormControl } from 'react-bootstrap'
 import { Netmask } from 'netmask';
 
 import './Subnetting.css';
 
-class Subnetting extends Component {
-	constructor(props) {
-		super(props);
+interface SubnettingState {
+    subnet: string;
+    mask: string;
+}
+
+class Subnetting extends Component<any, SubnettingState> {
+    constructor(props: any) {
+        super(props);
+
+        this.state = {
+            subnet: '',
+            mask: ''
+        }
 
 		this.state = {
 			subnet: '',
@@ -82,58 +92,61 @@ class Subnetting extends Component {
 		}
 	}
 
-	handleChangeSubnet(e) {
-		this.setState({ subnet: e.target.value });
+	handleChangeSubnet(e: ChangeEvent<HTMLInputElement>) {
+    	this.setState({ subnet: e.target.value });
 	}
 
-	handleChangeMask(e) {
-		this.setState({ mask: e.target.value });
+	handleChangeMask(e: ChangeEvent<HTMLInputElement>) {
+    	this.setState({ mask: e.target.value });
 	}
 
 	render() {
 		var fieldClass = 'subnetting-field-class-hidden';
 
-		if ((this.getValidationStateSubnet() === 'success') && (this.getValidationStateMask() === 'success')) {
-			fieldClass = 'subnetting-field-class';
-		}
-		else {
-			fieldClass = 'subnetting-field-class-hidden';
-		}
+		const isSubnetValid = this.getValidationStateSubnet() === 'success';
+    	const isSubnetInvalid = this.getValidationStateSubnet() === 'error';
+    	const isMaskValid = this.getValidationStateMask() === 'success';
+    	const isMaskInvalid = this.getValidationStateMask() === 'error';
+
+    if (isSubnetValid && isMaskValid) {
+        fieldClass = 'subnetting-field-class';
+    } else {
+        fieldClass = 'subnetting-field-class-hidden';
+    }
 
 		return (
 			<div className="subnetting-root-div">
 				<h3> Subnet Calculator </h3>
 				<div className="subnetting-form-class">
-					<Form inline className="subnet-inline">
-						<FormGroup
-							controlId="formSubnet"
-							validationState={this.getValidationStateSubnet()}
-						>
-							<FormControl
-								type="text"
-								value={this.state.subnet}
-								placeholder="Subnet"
-								onChange={this.handleChangeSubnet}
-							/>
-							<FormControl.Feedback />
-							<HelpBlock>Enter an IP address</HelpBlock>
-						</FormGroup>
-						<span className="subnetting-slash">/</span>
+					<Form className="subnet-inline d-inline-flex align-items-start">
+                    <FormGroup controlId="formSubnet" className="me-2">
+                        <FormControl
+                            type="text"
+                            value={this.state.subnet}
+                            placeholder="Subnet"
+                            onChange={this.handleChangeSubnet}
+                            isValid={isSubnetValid}      
+                            isInvalid={isSubnetInvalid}  
+                        />
+                        <FormControl.Feedback />
+                        <Form.Text className="text-muted">Enter an IP address</Form.Text>
+                    </FormGroup>
 
-						<FormGroup
-							controlId="formMask"
-							validationState={this.getValidationStateMask()}
-						>
-							<FormControl
-								type="text"
-								value={this.state.mask}
-								placeholder="Mask"
-								onChange={this.handleChangeMask}
-							/>
-							<FormControl.Feedback />
-							<HelpBlock>Enter a Mask (eg 24)</HelpBlock>
-						</FormGroup>
-					</Form>
+                    <span className="subnetting-slash mx-2">/</span>
+
+                    <FormGroup controlId="formMask">
+                        <FormControl
+                            type="text"
+                            value={this.state.mask}
+                            placeholder="Mask"
+                            onChange={this.handleChangeMask}
+                            isValid={isMaskValid}      
+                            isInvalid={isMaskInvalid}  
+                        />
+                        <FormControl.Feedback />
+                        <Form.Text className="text-muted">Enter a Mask (e.g. 24)</Form.Text>
+                    </FormGroup>
+                </Form>
 				</div>
 				<div className={fieldClass}>
 					<div>

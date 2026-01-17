@@ -1,9 +1,29 @@
 .dnsrecord-masonry-container {
-	max-width: 1500px;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px 0;
 }
 
-.dnsrecord-panel {
-	margin: 10px;
-      width: 300px;
-      word-wrap: break-word;
+.dnsrecord-card {
+    width: 300px; 
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    background-color: #fff;
+}
+
+.dns-record-details {
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.dns-record-details strong {
+    color: #495057;
+}
+
+.dnsrecord-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-color: #adb5bd;
 }

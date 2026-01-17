@@ -24,3 +24,13 @@ drawer {
 .overlayClass {
     z-index: 3 !important;
 }
+
+.btn-outline-secondary:hover {
+    background-color: rgb(70, 76, 85) !important;
+    border-color: rgb(16, 19, 22) !important;
+    color: #ffffff !important;
+}
+
+.btn-outline-secondary {
+    transition: all 0.2s ease-in-out !important;
+}
